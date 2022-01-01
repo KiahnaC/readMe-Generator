@@ -29,3 +29,4 @@ THEN once the prompts have been submitted, the terminal will create a detailed f
     name: "usage"
 
 GitHub link : https://github.com/KiahnaC/readMe-Generator 
+Deployed link : https://kiahnac.github.io/readMe-Generator/
