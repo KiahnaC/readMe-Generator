@@ -27,3 +27,5 @@ THEN once the prompts have been submitted, the terminal will create a detailed f
     
     message: "Describe what the user should know about this application?",
     name: "usage"
+
+GitHub link : https://github.com/KiahnaC/readMe-Generator 
