@@ -10,6 +10,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   return renderLicenseLink(data)
+  console.error("")
 }
 
 // TODO: Create a function that returns the license section of README
