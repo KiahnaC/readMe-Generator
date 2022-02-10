@@ -49,35 +49,22 @@ const questions = [ {
 
 // TODO: Create a function to write README file
 const writeToFile = (fileName, data) =>{
-    return writeToFile(fileName, data)
+    return fs.writeFileSync(fileName, data)
 }
 
 
 
 // TODO: Create a function to initialize app
 //prompting user to answer questions
-async function init() {
-    try {
-        userResponse = await inquirer.prompt(questions);
-        console.log("Your response",userResponse);
-    // Populate markedown content from answers
-        const fileContent = generateMarkdown(answers);
+function init() {
+     
+       inquirer.prompt(questions).then(answers=> {
+           console.log(answers)
+           const fileContent = generateMarkdown(answers);
+             writeToFile ("./README.md", fileContent);
+             console.log("README.md has been created in output folder!");
+       })
     
-        
-// Markdown content created in Readme file
-        await writeToFile ("./output/README.md", fileContent);
-        const markdown = generateMarkdown(userResponses, userInfo);
-        console.log(generateMarkdown);
-// File has been created and completed
-        console.log("README.md has been created in output folder!");
-// User error
-    
-    } catch (err) {
-        console
-        console.error("Error creating README. File not created.");
-        console.log(err);
-};
-
 // Function call to initialize app
-init()
 };
+init()
